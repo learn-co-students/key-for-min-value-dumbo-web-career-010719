@@ -5,10 +5,7 @@ def key_for_min_value(name_hash)
   result = []
   val = 0
   name_hash.each do |k,v|
-    if val == 0
-      val = v
-      result << k
-    elsif v < val
+    if val == 0 || v < val
       val = v
       result << k
     end
